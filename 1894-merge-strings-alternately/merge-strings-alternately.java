@@ -10,10 +10,10 @@ class Solution {
             j++;
         }
         if(i < word1.length()){
-            sb.append(word1.substring(i,word1.length()));
+            sb.append(word1.substring(i));
         }
         if(j < word2.length()){
-            sb.append(word2.substring(j,word2.length()));
+            sb.append(word2.substring(j));
         }
         return sb.toString();
     }
