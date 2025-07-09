@@ -3,7 +3,7 @@ class Solution {
         TreeMap<Integer,ArrayList<Integer>> map = new TreeMap<>();
         for(int i : arr)
         {
-            int count = find_count(i);
+            int count = Integer.bitCount(i);
             if(map.containsKey(count)){
             map.get(count).add(i);
             }else{
@@ -23,18 +23,5 @@ class Solution {
              }
         }
         return arr;
-    }
-    public int find_count(int x)
-    {
-        String s = Integer.toBinaryString(x);
-        int count = 0;
-        for(char c : s.toCharArray())
-        {
-            if(c=='1')
-            {
-                count++;
-            }
-        }
-        return count;
     }
 }
