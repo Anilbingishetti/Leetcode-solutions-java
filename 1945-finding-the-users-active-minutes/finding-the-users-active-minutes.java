@@ -14,7 +14,6 @@ class Solution {
                 map.get(id).add(ti);
             }
         }
-        System.out.print(map);
         for(int i : map.keySet()){
             Set<Integer> set = map.get(i);
             int s = set.size();
