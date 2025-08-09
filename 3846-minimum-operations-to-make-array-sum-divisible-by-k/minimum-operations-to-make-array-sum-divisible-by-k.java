@@ -7,6 +7,8 @@ class Solution {
         }
         if (sum < k)
         return sum;
+        if(sum > k)
         return sum%k;
+        return 0;
     }
 }
