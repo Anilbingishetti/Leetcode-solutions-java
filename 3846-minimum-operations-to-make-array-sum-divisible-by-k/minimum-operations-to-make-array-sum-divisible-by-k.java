@@ -5,6 +5,8 @@ class Solution {
         {
             sum+=i;
         }
+        if (sum < k)
+        return sum;
         return sum%k;
     }
 }
