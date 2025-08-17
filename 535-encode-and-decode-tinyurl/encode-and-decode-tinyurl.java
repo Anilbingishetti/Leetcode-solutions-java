@@ -1,16 +1,12 @@
 public class Codec {
-      String org;
-      String dec;
     // Encodes a URL to a shortened URL.
     public String encode(String longUrl) {
-        this.org = longUrl;
-        return dec;
+        return longUrl;
     }
 
     // Decodes a shortened URL to its original URL.
     public String decode(String shortUrl) {
-        this.dec = shortUrl;
-        return org;
+        return shortUrl;
     }
 }
 
