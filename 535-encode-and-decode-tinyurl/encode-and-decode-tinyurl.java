@@ -1,15 +1,30 @@
+import java.util.Random;
 public class Codec {
+    HashMap<Integer,String> map = new HashMap<>();
     // Encodes a URL to a shortened URL.
     public String encode(String longUrl) {
-        return longUrl;
+        String str = "abcdefghijklmnopqrstuvwxyz1234567890";
+        String prefix = "http://tinyurl.com/";
+        StringBuilder sb = new StringBuilder();
+        Random ran = new Random();
+        for(int i=0;i<=9;i++)
+        {
+            int ind = ran.nextInt(str.length());
+            sb.append(str.charAt(ind));
+        }
+        map.put(get_id(),longUrl);
+        return sb.toString();
     }
 
     // Decodes a shortened URL to its original URL.
     public String decode(String shortUrl) {
-        return shortUrl;
+        return map.get(get_id());
     }
+public int get_id()
+{
+    return 1;
 }
-
+}
 // Your Codec object will be instantiated and called as such:
 // Codec codec = new Codec();
 // codec.decode(codec.encode(url));
