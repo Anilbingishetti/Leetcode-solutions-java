@@ -1,8 +1,6 @@
 class Solution {
     public int garbageCollection(String[] garbage, int[] travel) {
-        int p = 0;
-        int g = 0;
-        int m = 0;
+        int count = 0;
         int ps=0;int gs=0;int ms=0;
         int prefix [] = new int [travel.length];
         prefix[0] = travel[0];
@@ -17,16 +15,16 @@ class Solution {
             {
                 if(c == 'G')
                 {
-                    g++;
+                    count++;
                     gs = i;
                 }
                 else if(c == 'P')
                 {
-                    p++;
+                    count++;
                     ps = i;
                 }
                 else{
-                    m++;
+                    count++;
                     ms = i;
                 }
             }
@@ -44,6 +42,6 @@ class Solution {
         {
             tot+=prefix[ps-1];
         }
-        return tot+g+p+m;
+        return tot+count;
     }
 }
