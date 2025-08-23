@@ -7,17 +7,10 @@ class Solution {
             if(i%2==0)
             {
                 sb1.append('0');
-            }
-            else{
-                sb1.append('1');
-            }
-        }
-        for(int i=0;i<s.length();i++){
-            if(i%2==0)
-            {
                 sb2.append('1');
             }
             else{
+                sb1.append('1');
                 sb2.append('0');
             }
         }
