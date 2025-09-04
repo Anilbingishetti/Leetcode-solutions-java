@@ -1,7 +1,6 @@
 class Solution {
     public List<Boolean> prefixesDivBy5(int[] nums) {
         List<Boolean> li = new ArrayList<>();
-        // BigInteger
         int n = 0;
         for(int i : nums)
         {
