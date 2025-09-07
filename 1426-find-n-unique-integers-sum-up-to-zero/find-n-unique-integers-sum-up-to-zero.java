@@ -4,7 +4,7 @@ class Solution {
         int mid = -1;
         if(n%2 ==0)
         {
-           mid = n/2 -1; 
+           mid = n/2 -1;
            int left = mid;
            int right = mid+1;
            int l1 = -1;
