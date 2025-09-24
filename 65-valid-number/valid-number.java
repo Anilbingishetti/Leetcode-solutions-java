@@ -21,7 +21,6 @@ class Solution {
                 return false;
             }
         }
-
         return numSeen;
     }
 }
