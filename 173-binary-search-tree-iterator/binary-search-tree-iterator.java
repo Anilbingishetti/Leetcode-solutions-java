@@ -20,7 +20,6 @@ class BSTIterator {
         this.li = new ArrayList<>();
         this.ind = 0;
         dfs(root,li);
-        System.out.print(li);
     }
     
     public int next() {
