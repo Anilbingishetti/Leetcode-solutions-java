@@ -1,32 +1,32 @@
 class Solution {
-    public int search(int[] arr, int target) {
-        int l =0;
-        int r = arr.length-1;
-        while(l<=r)
+    public int search(int[] nums, int target) {
+        int left = 0;
+        int right = nums.length-1;
+        while(left <= right)
         {
-            int m =(l+r)/2;
-            if(arr[m] == target)
+            int mid = (left+right)/2;
+            if(nums[mid] == target)
             {
-                return m;
+                return mid;
             }
-            else if(arr[l] <= arr[m])
+            else if(nums[left] <= nums[mid])
             {
-                  if(arr[l] <= target && arr[m] >= target)
-                  {
-                     r = m-1;
-                  }
-                  else{
-                    l= m+1;
-                  }
+                if(nums[mid] >= target && nums[left] <= target)
+                {
+                    right = mid-1;
+                }
+                else{
+                    left = mid+1;
+                }
             }
             else{
-                if(arr[m] <= target && arr[r] >= target)
-                  {
-                     l = m+1;
-                  }
-                  else{
-                    r= m-1;
-                  }  
+                if(nums[mid] <= target && nums[right] >= target)
+                {
+                    left = mid+1;
+                }
+                else{
+                    right = mid-1;
+                }
             }
         }
         return -1;
